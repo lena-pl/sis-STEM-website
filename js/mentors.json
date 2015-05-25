@@ -1,0 +1,49 @@
+[{
+	"name": "Mary Johnson",
+	"company": "Great University",
+	"description": "Mary is the HoD of Mathematics and loves teaching young people Maths.",
+	"email": "mary@great-university.ac.nz",
+	"lat": -41.290290,
+	"lng": 174.768456,
+	"suburb": "Wellington Central"
+}, {
+	"name": "Susan Jones",
+	"company": "Web 101",
+	"description": "Susan is a web developer specialising in front-end frameworks.",
+	"email": "sue@web101.com",
+	"lat": -41.283566,
+	"lng": 174.775570,
+	"suburb": "Wellington Central"
+}, {
+	"name": "Jane Bloggs",
+	"company": "Cool Electronics",
+	"description": "Jane is a passionate electrical engineer with 15 years of experience in the field.",
+	"email": "jane@cool-electronics.co.nz",
+	"lat": -41.290354,
+	"lng": 174.776321,
+	"suburb": "Wellington Central"
+}, {
+	"name": "Elsa Small",
+	"company": "Fun Maths",
+	"description": "Elsa likes to use maths to help businesses get where they need to go.",
+	"email": "elsa@fun-maths.org",
+	"lat": -41.209491,
+	"lng": 174.904568,
+	"suburb": "Lower Hutt"
+}, {
+	"name": "Sarah Smith",
+	"company": "Discovery School",
+	"description": "Sarah is a biochemist who works with fungal colonies.",
+	"email": "sarah@discovery-school.ac.nz",
+	"lat": -41.212109,
+	"lng": 174.891712,
+	"suburb": "Lower Hutt"
+}, {
+	"name": "Jennifer Davis",
+	"company": "Software 4 U",
+	"description": "Jen is a software developer who loves coding in Ruby and C++.",
+	"email": "jen@software4u.co.nz",
+	"lat": -41.138488,
+	"lng": 174.840278,
+	"suburb": "Porirua"
+}]

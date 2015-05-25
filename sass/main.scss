@@ -1,0 +1,674 @@
+@import 'clearfix';
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import url("http://fonts.googleapis.com/css?family=Pacifico");
+
+
+$color-background-header: #e2c917;
+$color-background-main: #e1e1e1;
+$color-text: #222;
+$color-text-accent: #e21742;
+$font-body: 'Open Sans', sans-serif;
+$font-special: 'Pacifico', cursive;
+$submit-color: #00a673;
+
+$width-xs: 414px;
+$width-small: 415px;
+$width-medium: 768px;
+$width-large: 1024px;
+
+@mixin responsive($width) {
+	@if $width == wide-screens {
+		@media all and (min-width: $width-large) 
+		{ @content; }
+	}
+	@else if $width == medium-screens {
+		@media all and (min-width: $width-medium)
+		{ @content; }
+	}
+	@else if $width == small-screens {
+		@media all and (min-width: $width-small) 
+		{ @content; }
+	}
+	@else if $width == xs-screens {
+		@media all and (max-width: $width-xs) 
+		{ @content; }
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $color-background-main;
+	font: 16px/1.5 $font-body;
+	color: $color-text;
+	text-align: center;
+}
+
+.subheading {
+	font-weight: 400;
+}
+
+/*==========================================
+					HEADER
+============================================*/
+
+header {
+	background-color: $color-background-header;
+
+	nav {
+		background-color: $color-background-main;
+		border-top: 4px solid $color-background-header;
+		font-size: 18px;
+		font-weight: 600;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@include responsive(xs-screens) {
+				display: none;
+			}
+		}
+
+		li:first-child {
+			@include responsive(xs-screens) {
+				padding-top: 10px;
+				margin-top: 40px;
+			}
+		}
+
+		li {
+
+			@include responsive(small-screens) {
+				display: inline-block;
+			}
+
+			a {
+			display: block;
+			color: $color-text-accent;
+			text-decoration: none;
+			font-variant: small-caps;
+			padding: 0.5em 1em;
+
+				&:active, &:hover {
+				background-color: $color-background-header;
+				color: $color-text;
+				}
+			}
+		}
+
+
+
+		button {
+			@include responsive(xs-screens) {
+				border-top: 4px solid $color-background-header;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				padding: 0.5em;
+				letter-spacing: 0.05em;
+				color: $color-text-accent;
+				font-size: 24px;
+				font-weight: 400;
+				font-variant: small-caps;
+
+				&:active {
+					background-color: $color-background-header;
+					color: $color-text;
+				} 
+			}
+
+			@include responsive(small-screens) {
+				display: none;
+			}
+		}
+	}
+
+	#header-content {
+		padding: 0 35px;
+		padding-bottom: 35px;
+
+		@include responsive(xs-screens) {
+			padding-top: 60px;
+		}
+
+		@include responsive(wide-screens) {
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	h1 {
+		margin: 0;
+		font: 50px/1.8 $font-special;
+
+		.text {
+			margin-top: 30px;
+			@include responsive(small-screens) {
+				display: block;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			padding-bottom: 10px;
+		}
+	}
+
+	p {
+		text-align: left;
+		font-weight: 300;
+	}
+
+	.icons {
+		width: 300px;
+		margin: 0 auto;
+		padding-top: 25px;
+
+		@include responsive(xs-screens) {
+			width: 260px;
+		}
+
+		@include clearfix();
+
+		p {
+			font: 22px $font-special;
+			text-align: center;
+		}
+
+		img {
+			max-height: 70px;
+			display: inline-block;
+
+			@include responsive(xs-screens) {
+					padding: 0 25px;
+			}
+		}
+		
+
+		[class*="-icon"] {
+			width: 130px;
+
+			a {
+				text-decoration: none;
+				color: $color-text;
+
+				p {
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+
+		.location-icon {
+			float: right;
+		}
+		.quiz-icon {
+			float: left;
+		}
+
+	}
+}
+
+/*==========================================
+					MAIN TEXT
+============================================*/
+
+main {
+
+	.main-text {
+		@include responsive(wide-screens) {
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-text;
+	}
+
+	img {
+		border-radius: 10px;
+		max-width: 100%;
+		margin-top: -20px;
+	}
+
+	.main-text {
+		padding: 35px;
+		padding-bottom: 10px;
+	}
+}
+
+
+h3 {
+	border-bottom: 4px solid $color-background-header;
+	border-top: 4px solid $color-background-header;
+	padding: 0.2em;
+	font-family: $font-special;
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+/*==========================================
+					QUIZ
+============================================*/
+
+div#test {
+	padding: 10px 40px 80px 40px;
+	margin-top: -20px;
+
+	@include responsive(small-screens) {
+		margin-left: -25px;
+	}
+	
+	@include responsive(xs-screens) {
+		margin-left: -25px;
+	}
+
+	p {
+		text-align: center;
+		max-width: 457px;
+		margin: 25px auto;
+
+		@include responsive(medium-screens) {
+			text-align: left;
+		}
+		
+		@include responsive(wide-screens) {
+			text-align: left;
+		}
+	}
+
+	h4 {
+		@include responsive(small-screens) {
+			margin-left: 25px;
+		}
+
+		@include responsive(xs-screens) {
+			margin-left: 25px;
+		}
+	}
+
+
+	// Hide radio button
+	input[type=radio]:not(old){
+	  width : 0;
+	  margin: 0;
+	  padding: 0;
+	  font-size: 0;
+	  opacity: 0;
+	}
+
+	input[type=radio] + label {
+		border: 4px solid $color-background-header;
+		border-radius: 10px;
+		margin: 0.3em;
+		display: inline-block;
+		line-height: 1.5em;
+		font-variant: small-caps;
+		font-size: 22px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		padding: 0.1em;
+		padding-bottom: 0.25em;
+		width: 210px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	input[type=radio]:checked + label {
+		background-color: $color-background-header;
+	}
+
+	button{
+		margin      : 0;
+		padding     : 0;
+		border      : 0;
+		background  : transparent;
+		font-family : inherit;
+		font-size   : 1em;
+		cursor      : pointer;
+		margin-top: 20px;
+
+  			&:focus,
+			&:active,
+			&:hover {
+				outline: 0;
+			}
+	}
+
+	button::-moz-focus-inner{
+	  padding : 0;
+	  border  : 0;
+	}
+
+	button span{
+		display: block;
+		width: 220px;
+		padding: 0.2em;
+		padding-bottom: 0.4em;
+		background-color: $submit-color;
+		border-radius: 10px;
+		text-decoration: none;
+		font-variant: small-caps;
+		letter-spacing: 0.05em;
+		font-size: 22px;
+		font-weight: 600;
+
+			&:focus,
+			&:active,
+			&:hover {
+				outline: 0;
+				cursor: pointer;
+			}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@include responsive(small-screens) {
+			width: 100%;
+		}
+
+		@include responsive(xs-screens) {
+			width: 100%;
+		}
+
+		@include responsive(medium-screens) {
+			width: 457px;
+			margin: 0 auto;
+		}
+
+		@include responsive(wide-screens) {
+			width: 457px;
+			margin: 0 auto;
+		}
+
+
+		li {
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: 0.05em;
+			background-color: $color-background-header;
+			border: 4px solid $color-background-main;
+			padding: 0.3em;
+			font-size: 14px;
+		}
+	}
+}
+
+/*==========================================
+					MAP
+============================================*/
+
+#map-canvas {
+	height: 250px;
+	width: 100%;
+}
+
+/*==========================================
+					MENTORS
+============================================*/
+
+ul#mentors-list {
+
+	.active {
+		background-color: $submit-color;
+
+			.mentor-email {
+				color: #fff;
+			}
+	}
+
+	.mentor-name {
+		font-family: $font-special;
+		font-size: 22px;
+	}
+	
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+
+		@include responsive(medium-screens) {
+			width: 810px;
+		}
+
+		@include responsive(wide-screens) {
+			width: 810px;
+		}
+
+	@include clearfix();
+
+	li {
+		a {
+			width: 100%;
+			height: 100%;
+		}
+
+		border: 4px solid $color-background-main;
+		background-color: $color-background-header;
+		padding: 25px 20px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		height: 270px;
+
+		@include responsive(small-screens) {
+			width: 250px;
+			margin: 0 auto;
+		}
+
+		@include responsive(xs-screens) {
+			width: 250px;
+			margin: 0 auto;
+		}
+
+		@include responsive(medium-screens) {
+			width: 270px;
+			float: left;
+		}
+
+		@include responsive(wide-screens) {
+			width: 270px;
+			float: left;
+		}
+
+		.mentor-email {
+			color: $color-text-accent;
+			margin: 35px 0 -20px 0; 
+		}
+
+		p {
+			font-weight: 300;
+			font-size: 14px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $submit-color;
+
+			.mentor-email {
+				color: #fff;
+			}
+		}
+	}
+}
+
+/*==========================================
+					SUBURBS
+============================================*/
+
+ul#suburbs-list {
+	list-style: none;
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	margin-bottom: 50px;
+
+	@include clearfix();
+
+	li {
+		border: 4px solid $color-background-header;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		padding: 0.2em;
+
+		&:hover {
+			background-color: $color-background-header;
+		}
+
+		@include responsive(medium-screens) {
+			width: 250px;
+			float: left;
+			margin: 0 13px;
+		}
+
+		@include responsive(wide-screens) {
+			width: 250px;
+			float: left;
+			margin: 0 13px;
+		}
+	}
+}
+
+/*==========================================
+					FORM
+============================================*/
+
+.contact-form {
+	width: 100%;
+
+	form#enquiries {
+		max-width: 100%;
+		padding: 25px;
+		text-align: left;
+		margin: 0;
+
+		label {
+			font-weight: 600;
+		}
+
+		input,
+		textarea {
+
+			width: 100%;
+			height: 40px;
+			border: 2px solid $color-background-header;
+			color: $color-text;
+			display: block;
+			margin-bottom: 27px;
+			padding: 5px 8px;
+			font-size: 16px;
+			margin-bottom: 27px;
+		}
+
+		textarea {
+			height: 100px;
+			max-height: 100px;
+			resize: none;
+		}
+
+		.button {
+			display: block;
+			padding: 0em 3em 0.2em 3em;
+			background-color: $color-background-header;
+			border-radius: 10px;
+			text-decoration: none;
+			font-variant: small-caps;
+			font-size: 22px;
+			font-weight: 600;
+			color: $color-text;
+			margin-top: 25px;
+
+				&:focus,
+				&:active,
+				&:hover {
+					outline: 0;
+					border: 2px solid $submit-color;
+					background-color: $submit-color;
+					cursor: pointer;
+				}
+		}
+
+		.danger {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: $color-text-accent;
+
+			padding: 0 5px;
+			background-color: $color-text-accent;
+			color: #fff;
+
+			@include responsive(small-screens) {
+				margin-top: -27px;
+				margin-bottom: -35px;
+				position: relative;
+				bottom: 0;
+				padding: 0 5px;
+				width: 100%;
+				background-color: $color-text-accent;
+				color: #fff;
+			}
+
+			@include responsive(xs-screens) {
+				margin-top: -27px;
+				margin-bottom: -35px;
+				position: relative;
+				bottom: 0;
+				padding: 0 5px;
+				width: 100%;
+				background-color: $color-text-accent;
+				color: #fff;
+			}
+		}
+
+		.field {
+			position: relative;
+			margin-bottom: 60px;
+		}
+
+		:focus::-webkit-input-placeholder {
+			color: transparent;
+		}
+		:focus::-moz-placeholder {
+			color: transparent;
+		}
+		:focus:-ms-input-placeholder {  
+		   color: transparent;  
+		}
+	}
+}
+
+/*==========================================
+					FOOTER
+============================================*/
+
+footer {
+	margin-top: 20px;
+	border-top: 4px solid $color-text;
+	background-color: $color-background-header;
+
+	p {
+		margin-bottom: 0;
+		padding-bottom: 15px;
+	}
+}

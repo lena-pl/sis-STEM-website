@@ -1,0 +1,143 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import url("http://fonts.googleapis.com/css?family=Pacifico");
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body { margin: 0; padding: 0; background-color: #e1e1e1; font: 16px/1.5 "Open Sans", sans-serif; color: #222222; text-align: center; }
+
+.subheading { font-weight: 400; }
+
+/*==========================================
+					HEADER
+============================================*/
+header { background-color: #e2c917; }
+header nav { background-color: #e1e1e1; border-top: 4px solid #e2c917; font-size: 18px; font-weight: 600; }
+header nav ul { margin: 0; padding: 0; list-style: none; }
+@media all and (max-width: 414px) { header nav ul { display: none; } }
+@media all and (max-width: 414px) { header nav li:first-child { padding-top: 10px; margin-top: 40px; } }
+@media all and (min-width: 415px) { header nav li { display: inline-block; } }
+header nav li a { display: block; color: #e21742; text-decoration: none; font-variant: small-caps; padding: 0.5em 1em; }
+header nav li a:active, header nav li a:hover { background-color: #e2c917; color: #222222; }
+@media all and (max-width: 414px) { header nav button { border-top: 4px solid #e2c917; width: 100%; position: absolute; top: 0; right: 0; border: none; padding: 0.5em; letter-spacing: 0.05em; color: #e21742; font-size: 24px; font-weight: 400; font-variant: small-caps; }
+  header nav button:active { background-color: #e2c917; color: #222222; } }
+@media all and (min-width: 415px) { header nav button { display: none; } }
+header #header-content { padding: 0 35px; padding-bottom: 35px; }
+@media all and (max-width: 414px) { header #header-content { padding-top: 60px; } }
+@media all and (min-width: 1024px) { header #header-content { width: 900px; margin: 0 auto; } }
+header h1 { margin: 0; font: 50px/1.8 "Pacifico", cursive; }
+header h1 .text { margin-top: 30px; }
+@media all and (min-width: 415px) { header h1 .text { display: block; } }
+header h1 img { max-width: 100%; padding-bottom: 10px; }
+header p { text-align: left; font-weight: 300; }
+header .icons { width: 300px; margin: 0 auto; padding-top: 25px; }
+@media all and (max-width: 414px) { header .icons { width: 260px; } }
+header .icons:before, header .icons:after { display: table; content: " "; }
+header .icons:after { clear: both; }
+header .icons p { font: 22px "Pacifico", cursive; text-align: center; }
+header .icons img { max-height: 70px; display: inline-block; }
+@media all and (max-width: 414px) { header .icons img { padding: 0 25px; } }
+header .icons [class*="-icon"] { width: 130px; }
+header .icons [class*="-icon"] a { text-decoration: none; color: #222222; }
+header .icons [class*="-icon"] a p:hover, header .icons [class*="-icon"] a p:focus { text-decoration: underline; }
+header .icons .location-icon { float: right; }
+header .icons .quiz-icon { float: left; }
+
+/*==========================================
+					MAIN TEXT
+============================================*/
+@media all and (min-width: 1024px) { main .main-text { width: 900px; margin: 0 auto; } }
+main a { text-decoration: none; color: #222222; }
+main img { border-radius: 10px; max-width: 100%; margin-top: -20px; }
+main .main-text { padding: 35px; padding-bottom: 10px; }
+
+h3 { border-bottom: 4px solid #e2c917; border-top: 4px solid #e2c917; padding: 0.2em; font-family: "Pacifico", cursive; font-size: 26px; margin-top: 50px; }
+
+/*==========================================
+					QUIZ
+============================================*/
+div#test { padding: 10px 40px 80px 40px; margin-top: -20px; }
+@media all and (min-width: 415px) { div#test { margin-left: -25px; } }
+@media all and (max-width: 414px) { div#test { margin-left: -25px; } }
+div#test p { text-align: center; max-width: 457px; margin: 25px auto; }
+@media all and (min-width: 768px) { div#test p { text-align: left; } }
+@media all and (min-width: 1024px) { div#test p { text-align: left; } }
+@media all and (min-width: 415px) { div#test h4 { margin-left: 25px; } }
+@media all and (max-width: 414px) { div#test h4 { margin-left: 25px; } }
+div#test input[type=radio]:not(old) { width: 0; margin: 0; padding: 0; font-size: 0; opacity: 0; }
+div#test input[type=radio] + label { border: 4px solid #e2c917; border-radius: 10px; margin: 0.3em; display: inline-block; line-height: 1.5em; font-variant: small-caps; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; padding: 0.1em; padding-bottom: 0.25em; width: 210px; }
+div#test input[type=radio] + label:hover { cursor: pointer; }
+div#test input[type=radio]:checked + label { background-color: #e2c917; }
+div#test button { margin: 0; padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 1em; cursor: pointer; margin-top: 20px; }
+div#test button:focus, div#test button:active, div#test button:hover { outline: 0; }
+div#test button::-moz-focus-inner { padding: 0; border: 0; }
+div#test button span { display: block; width: 220px; padding: 0.2em; padding-bottom: 0.4em; background-color: #00a673; border-radius: 10px; text-decoration: none; font-variant: small-caps; letter-spacing: 0.05em; font-size: 22px; font-weight: 600; }
+div#test button span:focus, div#test button span:active, div#test button span:hover { outline: 0; cursor: pointer; }
+div#test ul { list-style: none; margin: 0; padding: 0; }
+@media all and (min-width: 415px) { div#test ul { width: 100%; } }
+@media all and (max-width: 414px) { div#test ul { width: 100%; } }
+@media all and (min-width: 768px) { div#test ul { width: 457px; margin: 0 auto; } }
+@media all and (min-width: 1024px) { div#test ul { width: 457px; margin: 0 auto; } }
+div#test ul li { text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; background-color: #e2c917; border: 4px solid #e1e1e1; padding: 0.3em; font-size: 14px; }
+
+/*==========================================
+					MAP
+============================================*/
+#map-canvas { height: 250px; width: 100%; }
+
+/*==========================================
+					MENTORS
+============================================*/
+ul#mentors-list { list-style: none; margin: 0 auto; padding: 0; }
+ul#mentors-list .active { background-color: #00a673; }
+ul#mentors-list .active .mentor-email { color: #fff; }
+ul#mentors-list .mentor-name { font-family: "Pacifico", cursive; font-size: 22px; }
+@media all and (min-width: 768px) { ul#mentors-list { width: 810px; } }
+@media all and (min-width: 1024px) { ul#mentors-list { width: 810px; } }
+ul#mentors-list:before, ul#mentors-list:after { display: table; content: " "; }
+ul#mentors-list:after { clear: both; }
+ul#mentors-list li { border: 4px solid #e1e1e1; background-color: #e2c917; padding: 25px 20px; font-weight: 600; letter-spacing: 0.05em; height: 270px; }
+ul#mentors-list li a { width: 100%; height: 100%; }
+@media all and (min-width: 415px) { ul#mentors-list li { width: 250px; margin: 0 auto; } }
+@media all and (max-width: 414px) { ul#mentors-list li { width: 250px; margin: 0 auto; } }
+@media all and (min-width: 768px) { ul#mentors-list li { width: 270px; float: left; } }
+@media all and (min-width: 1024px) { ul#mentors-list li { width: 270px; float: left; } }
+ul#mentors-list li .mentor-email { color: #e21742; margin: 35px 0 -20px 0; }
+ul#mentors-list li p { font-weight: 300; font-size: 14px; }
+ul#mentors-list li:hover, ul#mentors-list li:active, ul#mentors-list li:focus { background-color: #00a673; }
+ul#mentors-list li:hover .mentor-email, ul#mentors-list li:active .mentor-email, ul#mentors-list li:focus .mentor-email { color: #fff; }
+
+/*==========================================
+					SUBURBS
+============================================*/
+ul#suburbs-list { list-style: none; margin: 0; margin-top: 15px; padding: 0; margin-bottom: 50px; }
+ul#suburbs-list:before, ul#suburbs-list:after { display: table; content: " "; }
+ul#suburbs-list:after { clear: both; }
+ul#suburbs-list li { border: 4px solid #e2c917; border-radius: 10px; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.05em; padding: 0.2em; }
+ul#suburbs-list li:hover { background-color: #e2c917; }
+@media all and (min-width: 768px) { ul#suburbs-list li { width: 250px; float: left; margin: 0 13px; } }
+@media all and (min-width: 1024px) { ul#suburbs-list li { width: 250px; float: left; margin: 0 13px; } }
+
+/*==========================================
+					FORM
+============================================*/
+.contact-form { width: 100%; }
+.contact-form form#enquiries { max-width: 100%; padding: 25px; text-align: left; margin: 0; }
+.contact-form form#enquiries label { font-weight: 600; }
+.contact-form form#enquiries input, .contact-form form#enquiries textarea { width: 100%; height: 40px; border: 2px solid #e2c917; color: #222222; display: block; margin-bottom: 27px; padding: 5px 8px; font-size: 16px; margin-bottom: 27px; }
+.contact-form form#enquiries textarea { height: 100px; max-height: 100px; resize: none; }
+.contact-form form#enquiries .button { display: block; padding: 0em 3em 0.2em 3em; background-color: #e2c917; border-radius: 10px; text-decoration: none; font-variant: small-caps; font-size: 22px; font-weight: 600; color: #222222; margin-top: 25px; }
+.contact-form form#enquiries .button:focus, .contact-form form#enquiries .button:active, .contact-form form#enquiries .button:hover { outline: 0; border: 2px solid #00a673; background-color: #00a673; cursor: pointer; }
+.contact-form form#enquiries .danger { display: block; position: absolute; top: 0; right: 0; color: #e21742; padding: 0 5px; background-color: #e21742; color: #fff; }
+@media all and (min-width: 415px) { .contact-form form#enquiries .danger { margin-top: -27px; margin-bottom: -35px; position: relative; bottom: 0; padding: 0 5px; width: 100%; background-color: #e21742; color: #fff; } }
+@media all and (max-width: 414px) { .contact-form form#enquiries .danger { margin-top: -27px; margin-bottom: -35px; position: relative; bottom: 0; padding: 0 5px; width: 100%; background-color: #e21742; color: #fff; } }
+.contact-form form#enquiries .field { position: relative; margin-bottom: 60px; }
+.contact-form form#enquiries :focus::-webkit-input-placeholder { color: transparent; }
+.contact-form form#enquiries :focus::-moz-placeholder { color: transparent; }
+.contact-form form#enquiries :focus:-ms-input-placeholder { color: transparent; }
+
+/*==========================================
+					FOOTER
+============================================*/
+footer { margin-top: 20px; border-top: 4px solid #222222; background-color: #e2c917; }
+footer p { margin-bottom: 0; padding-bottom: 15px; }
+
+/*# sourceMappingURL=main.css.map */
