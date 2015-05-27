@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-NZ">
+<?php 
+$title = "";
+$page = "index"; 
+include "master.inc.php"; 
 
-<head>
-    <title>sis-STEM</title>
-    <meta charset="utf-8">
-    <meta name="description" content="sis-STEM is a web service for helping young people make career choices.">
-    <meta name="author" content="Quiz Master">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <button>menu</button>
-            <ul>
-                <li><a href="./">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="mentors.html">find a mentor</a></li>
-                <li><a href="mentors.html#enquiries">contact us</a></li>
-            </ul>
-        </nav>
+function content () {
+  ?>
 
         <div id="header-content">
             <h1>
@@ -40,11 +21,11 @@
 
             <div class="icons">
                 <div class="quiz-icon">
-                    <a href="#test_status"><img src="images/quiz-icon.png" alt="quiz icon">
+                    <a href="./#test_status"><img src="images/quiz-icon.png" alt="quiz icon">
                     <p>Quiz</p></a>
                 </div>
                 <div class="location-icon">
-                    <a href="mentors.html"><img src="images/location-icon.png" alt="location icon">
+                    <a href="./?page=mentors"><img src="images/location-icon.png" alt="location icon">
                     <p>Mentors</p></a>
                 </div>
             </div>
@@ -62,13 +43,5 @@
 
     </main>
 
-    <footer>
-        <p>© sis-STEM 2015</p>
-    </footer>
-
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/quiz.js"></script>
-<script src="js/menu.js"></script>
-</body>
-
-</html>
+  <?php 
+}

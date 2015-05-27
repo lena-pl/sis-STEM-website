@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-NZ">
+<?php 
+$title = "Find a Mentor";
+$page = "mentors"; 
+include "master.inc.php"; 
 
-<head>
-    <title>Mentors</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Find a STEM mentor in your area.">
-    <meta name="author" content="Quiz Master">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <button>menu</button>
-            <ul>
-                <li><a href="./">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="mentors.html">find a mentor</a></li>
-                <li><a href="mentors.html#enquiries">contact us</a></li>
-            </ul>
-        </nav>
+function content () {
+  ?>
 
         <div id="header-content">
             <h1>
@@ -47,7 +28,7 @@
             <h3>Email Us</h3>
 
             <div class="contact-form">
-                <form id="enquiries" action="success.html" method="post" novalidate>
+                <form id="enquiries" action="./?page=success" method="post" novalidate>
 
                     <div class="field">
                         <label for="name">Your name</label>
@@ -74,26 +55,5 @@
         </div>
     </main>
 
-    <footer>
-        <p>© sis-STEM 2015</p>
-    </footer>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLJpYknNa_8xZQLssh5-KuU424vJ5lxE"></script>
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/map.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/form-validation-kit.js"></script>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    var contactForm = document.querySelector("#enquiries");
-
-    addFormValidation(contactForm);
-
-});
-</script>
-</body>
-
-</html>
+  <?php 
+}
