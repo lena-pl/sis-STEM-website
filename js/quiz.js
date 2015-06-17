@@ -48,31 +48,31 @@ var weights = [
 
     // Question 4
      [
-        [3, 2, 1, 4], // Impatience (Science, Tech, Engineering, Math)
+        [2, 4, 3, 1], // Impatience (Science, Tech, Engineering, Math)
         [3, 1, 2, 4], // Stubbornness (Science, Tech, Engineering, Math)
-        [1, 4, 3, 2], // Nervousness (Science, Tech, Engineering, Math)
-        [4, 3, 1, 2], // Procrastination (Science, Tech, Engineering, Math)
+        [3, 1, 2, 4], // Nervousness (Science, Tech, Engineering, Math)
+        [3, 4, 2, 1], // Procrastination (Science, Tech, Engineering, Math)
         [1, 2, 3, 4], // Need for Control (Science, Tech, Engineering, Math)
         [2, 1, 4, 3] // Time Management (Science, Tech, Engineering, Math)
     ],
 
     // Question 5
      [
-        [4, 1, 3, 2], // Library (Science, Tech, Engineering, Math)
-        [1, 4, 2, 3], // Own Bedroom (Science, Tech, Engineering, Math)
+        [2, 1, 3, 4], // Library (Science, Tech, Engineering, Math)
+        [1, 3, 2, 4], // Own Bedroom (Science, Tech, Engineering, Math)
         [3, 2, 4, 1], // Lab/Classroom (Science, Tech, Engineering, Math)
         [2, 4, 3, 1], // A friend's house (Science, Tech, Engineering, Math)
         [4, 1, 3, 2], // Outside (Science, Tech, Engineering, Math)
-        [1, 3, 4, 2] // Coffee Shop (Science, Tech, Engineering, Math)
+        [1, 4, 2, 3] // Coffee Shop (Science, Tech, Engineering, Math)
     ],
 
     // Question 6
      [
-        [3, 4, 2, 1], // Visual (Science, Tech, Engineering, Math)
-        [4, 2, 3, 1], // Aural/Musical (Science, Tech, Engineering, Math)
+        [1, 4, 2, 3], // Visual (Science, Tech, Engineering, Math)
+        [4, 2, 1, 3], // Aural/Musical (Science, Tech, Engineering, Math)
         [3, 4, 1, 2], // Verbal (Science, Tech, Engineering, Math)
         [3, 2, 4, 1], // Physical (Science, Tech, Engineering, Math)
-        [4, 1, 3, 2], // Logical/Systematic (Science, Tech, Engineering, Math)
+        [4, 1, 2, 3], // Logical/Systematic (Science, Tech, Engineering, Math)
         [4, 3, 2, 1] // Social (Science, Tech, Engineering, Math)
     ]
 
