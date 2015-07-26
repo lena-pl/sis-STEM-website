@@ -3,7 +3,7 @@ This is a website idea I am developing to help young women explore STEM careers.
 
 #Design
 Here is a link to the design of the site and some of the thinking behind it on my Behance page:
-https://www.behance.net/gallery/26830999/sis-STEM-responsive-website-design
+on.be.net/1FzVHha
 
 #Features
 sis-STEM has 3 main features: 
