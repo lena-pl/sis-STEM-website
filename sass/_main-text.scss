@@ -1,0 +1,41 @@
+@import 'variables';
+
+/*==========================================
+					MAIN TEXT
+============================================*/
+
+main {
+
+	.main-text {
+		@include responsive(wide-screens) {
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-text;
+	}
+
+	img {
+		border-radius: 10px;
+		max-width: 100%;
+		margin-top: -20px;
+	}
+
+	.main-text {
+		padding: 35px;
+		padding-bottom: 10px;
+	}
+}
+
+
+h3 {
+	border-bottom: 4px solid $color-background-header;
+	border-top: 4px solid $color-background-header;
+	padding: 0.2em;
+	font-family: $font-special;
+	font-size: 26px;
+	margin-top: 50px;
+}

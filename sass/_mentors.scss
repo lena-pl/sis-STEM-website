@@ -1,0 +1,89 @@
+@import 'variables';
+
+/*==========================================
+					MENTORS
+============================================*/
+
+ul#mentors-list {
+
+	.active {
+		background-color: $submit-color;
+
+			.mentor-email {
+				color: #fff;
+			}
+	}
+
+	.mentor-name {
+		font-family: $font-special;
+		font-size: 22px;
+	}
+	
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+
+		@include responsive(medium-screens) {
+			width: 810px;
+		}
+
+		@include responsive(wide-screens) {
+			width: 810px;
+		}
+
+	@include clearfix();
+
+	li {
+		a {
+			width: 100%;
+			height: 100%;
+		}
+
+		border: 4px solid $color-background-main;
+		background-color: $color-background-header;
+		padding: 25px 20px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		height: 270px;
+
+		@include responsive(small-screens) {
+			width: 250px;
+			margin: 0 auto;
+		}
+
+		@include responsive(xs-screens) {
+			width: 250px;
+			margin: 0 auto;
+		}
+
+		@include responsive(medium-screens) {
+			width: 270px;
+			float: left;
+		}
+
+		@include responsive(wide-screens) {
+			width: 270px;
+			float: left;
+		}
+
+		.mentor-email {
+			color: $color-text-accent;
+			margin: 35px 0 -20px 0; 
+		}
+
+		p {
+			font-weight: 300;
+			font-size: 14px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $submit-color;
+
+			.mentor-email {
+				color: #fff;
+			}
+		}
+	}
+}

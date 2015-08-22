@@ -1,0 +1,169 @@
+@import 'variables';
+
+/*==========================================
+					HEADER
+============================================*/
+
+header {
+	background-color: $color-background-header;
+
+	nav {
+		background-color: $color-background-main;
+		border-top: 4px solid $color-background-header;
+		font-size: 18px;
+		font-weight: 600;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@include responsive(xs-screens) {
+				display: none;
+			}
+		}
+
+		li:first-child {
+			@include responsive(xs-screens) {
+				padding-top: 10px;
+				margin-top: 40px;
+			}
+		}
+
+		li {
+
+			@include responsive(small-screens) {
+				display: inline-block;
+			}
+
+			a {
+			display: block;
+			color: $color-text-accent;
+			text-decoration: none;
+			font-variant: small-caps;
+			padding: 0.5em 1em;
+
+				&:active, &:hover {
+				background-color: $color-background-header;
+				color: $color-text;
+				}
+			}
+		}
+
+
+
+		button {
+			@include responsive(xs-screens) {
+				border-top: 4px solid $color-background-header;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				padding: 0.5em;
+				letter-spacing: 0.05em;
+				color: $color-text-accent;
+				font-size: 24px;
+				font-weight: 400;
+				font-variant: small-caps;
+
+				&:active {
+					background-color: $color-background-header;
+					color: $color-text;
+				} 
+			}
+
+			@include responsive(small-screens) {
+				display: none;
+			}
+		}
+	}
+
+	#header-content {
+		padding: 0 35px;
+		padding-bottom: 35px;
+
+		@include responsive(xs-screens) {
+			padding-top: 60px;
+		}
+
+		@include responsive(wide-screens) {
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	h1 {
+		margin: 0;
+		font: 50px/1.8 $font-special;
+
+		.text {
+			margin-top: 30px;
+			@include responsive(small-screens) {
+				display: block;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			padding-bottom: 10px;
+		}
+	}
+
+	p {
+		text-align: left;
+		font-weight: 300;
+	}
+
+	.icons {
+		width: 300px;
+		margin: 0 auto;
+		padding-top: 25px;
+
+		@include responsive(xs-screens) {
+			width: 260px;
+		}
+
+		@include clearfix();
+
+		p {
+			font: 22px $font-special;
+			text-align: center;
+		}
+
+		img {
+			max-height: 70px;
+			display: inline-block;
+
+			@include responsive(xs-screens) {
+					padding: 0 25px;
+			}
+		}
+		
+
+		[class*="-icon"] {
+			width: 130px;
+
+			a {
+				text-decoration: none;
+				color: $color-text;
+
+				p {
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+
+		.location-icon {
+			float: right;
+		}
+		.quiz-icon {
+			float: left;
+		}
+
+	}
+}

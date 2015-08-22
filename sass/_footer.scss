@@ -1,0 +1,16 @@
+@import 'variables';
+
+/*==========================================
+					FOOTER
+============================================*/
+
+footer {
+	margin-top: 20px;
+	border-top: 4px solid $color-text;
+	background-color: $color-background-header;
+
+	p {
+		margin-bottom: 0;
+		padding-bottom: 15px;
+	}
+}

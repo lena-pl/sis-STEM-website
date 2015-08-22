@@ -1,0 +1,31 @@
+$color-background-header: #e2c917;
+$color-background-main: #e1e1e1;
+$color-text: #222;
+$color-text-accent: #e21742;
+$font-body: 'Open Sans', sans-serif;
+$font-special: 'Pacifico', cursive;
+$submit-color: #00a673;
+
+$width-xs: 414px;
+$width-small: 415px;
+$width-medium: 768px;
+$width-large: 1024px;
+
+@mixin responsive($width) {
+	@if $width == wide-screens {
+		@media all and (min-width: $width-large) 
+		{ @content; }
+	}
+	@else if $width == medium-screens {
+		@media all and (min-width: $width-medium)
+		{ @content; }
+	}
+	@else if $width == small-screens {
+		@media all and (min-width: $width-small) 
+		{ @content; }
+	}
+	@else if $width == xs-screens {
+		@media all and (max-width: $width-xs) 
+		{ @content; }
+	}
+}
