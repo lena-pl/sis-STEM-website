@@ -9,7 +9,6 @@ header {
 
 	nav {
 		background-color: $color-background-main;
-		border-top: 4px solid $color-background-header;
 		font-size: 18px;
 		font-weight: 600;
 
@@ -47,14 +46,22 @@ header {
 				background-color: $color-background-header;
 				color: $color-text;
 				}
+
+				&:active:last-child, &:hover:last-child {
+					border-bottom: 4px solid $color-background-main;
+				}
 			}
+
+			a:last-child {
+					border-bottom: 4px solid $color-background-main;
+				}
 		}
 
 
 
 		button {
 			@include responsive(xs-screens) {
-				border-top: 4px solid $color-background-header;
+				background-color: $color-background-main;
 				width: 100%;
 				position: absolute;
 				top: 0;
@@ -71,6 +78,10 @@ header {
 					background-color: $color-background-header;
 					color: $color-text;
 				} 
+
+				&:focus {
+					outline: 0;
+				}
 			}
 
 			@include responsive(small-screens) {
