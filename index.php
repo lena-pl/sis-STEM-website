@@ -1,11 +1,24 @@
 <?php
 
-if (!isset($_GET['page']) || $_GET['page'] == "") {
-    include "templates/index.inc.php";
+$page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-} else if ($_GET['page'] === "mentors") {
-    include "templates/mentors.inc.php";
 
-} else if ($_GET['page'] === "success") {
-    include "templates/success.inc.php";
+switch ($page) {
+    case "home":
+
+        include "templates/index.inc.php";
+
+        break;
+
+    case "mentors":
+
+        include "templates/mentors.inc.php";
+
+        break;
+
+    case "success":
+
+        include "templates/success.inc.php";
+
+        break;
 }
