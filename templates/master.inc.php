@@ -36,21 +36,7 @@
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/menu.js"></script>
 
-<?php if ($page === "index"): ?> 
-<script src="js/quiz.js"></script>
-<?php endif ?>
-
-<?php if ($page === "mentors"): ?> 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLJpYknNa_8xZQLssh5-KuU424vJ5lxE"></script> 
-<script src="js/map.js"></script>
-<script src="js/form-validation-kit.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var contactForm = document.querySelector("#enquiries");
-    addFormValidation(contactForm);
-});
-</script>
-<?php endif ?>
+    <?php scripts (); ?>
 
 </body>
 

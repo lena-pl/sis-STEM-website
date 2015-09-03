@@ -57,3 +57,19 @@ function content () {
 
   <?php 
 }
+
+function scripts () {
+  ?>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLJpYknNa_8xZQLssh5-KuU424vJ5lxE"></script> 
+    <script src="js/map.js"></script>
+    <script src="js/form-validation-kit.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var contactForm = document.querySelector("#enquiries");
+        addFormValidation(contactForm);
+    });
+    </script>
+
+  <?php 
+}

@@ -45,3 +45,11 @@ function content () {
 
   <?php 
 }
+
+function scripts () {
+  ?>
+
+    <script src="js/quiz.js"></script>
+
+  <?php 
+}
