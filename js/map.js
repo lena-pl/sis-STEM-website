@@ -200,7 +200,18 @@ function selectMentorMarker(marker, listItem) {
     marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
     map.setZoom(14);
     map.panTo(marker.getPosition());
-    // window.scrollTo('#map-canvas');
+
+    window.scroll(0,findPos(document.getElementById("map-anchor")));
+
+    function findPos(obj) {
+        var top = 0;
+        if (obj.offsetParent) {
+            do {
+                top += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+        return [top];
+        }
+    }
 }
 
 function deselectAllMarkers() {

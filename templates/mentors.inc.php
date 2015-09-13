@@ -21,6 +21,7 @@ function content () {
     </header>
 
     <main>
+        <div id="map-anchor"></div>
         <div id="map-canvas"></div>
         <div class="main-text">
             <ul id="suburbs-list"></ul>

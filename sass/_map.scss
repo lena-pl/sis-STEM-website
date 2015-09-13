@@ -4,6 +4,11 @@
 					MAP
 ============================================*/
 
+#map-anchor {
+	min-height: 20px;
+	background-color: $color-background-header;
+}
+
 #map-canvas {
 	height: 250px;
 	width: 100%;
