@@ -31,8 +31,8 @@ function content () {
                 <form id="enquiries" action="./?page=success" method="post" novalidate>
 
                     <div class="field">
-                        <label for="name">Your name</label>
-                        <input id="name" type="text" name="name" placeholder="Jane Doe">
+                        <label for="name">Your name *</label>
+                        <input id="name" class="fv-minlength-2" type="text" name="name" placeholder="Jane Doe" required>
                         <div id="name-error" class="danger"></div>
                     </div>
 
