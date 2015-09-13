@@ -78,6 +78,8 @@ div#test ul li { text-transform: uppercase; font-weight: 600; letter-spacing: 0.
 /*==========================================
 					MAP
 ============================================*/
+#map-anchor { min-height: 20px; background-color: #F7CA18; }
+
 #map-canvas { height: 250px; width: 100%; }
 
 /*==========================================
