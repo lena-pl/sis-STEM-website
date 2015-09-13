@@ -38,7 +38,9 @@ function content () {
             <p class="subheading">This quiz is designed to help you discover a few STEM careers that might suit you. It's only 6 questions long, so will only take a minute of your time! After you get your result, feel free to look further into the available options or contact one of our mentors in your area for some advice.</p>
 
             <h3 id="test_status"></h3>
-            <div id="test"></div>
+            <div id="test-container">
+                <div id="test"></div>
+            </div>
         </div>
 
     </main>

@@ -51,6 +51,8 @@ h3 { border-bottom: 4px solid #F7CA18; border-top: 4px solid #F7CA18; padding: 0
 /*==========================================
 					QUIZ
 ============================================*/
+#test-container { max-width: 450px; margin: 0 auto; }
+
 div#test { padding: 10px 40px 80px 40px; margin-top: -20px; }
 @media all and (min-width: 415px) { div#test { margin-left: -25px; } }
 @media all and (max-width: 414px) { div#test { margin-left: -25px; } }
@@ -60,19 +62,19 @@ div#test p { text-align: center; max-width: 457px; margin: 25px auto; }
 @media all and (min-width: 415px) { div#test h4 { margin-left: 25px; } }
 @media all and (max-width: 414px) { div#test h4 { margin-left: 25px; } }
 div#test input[type=radio]:not(old) { width: 0; margin: 0; padding: 0; font-size: 0; opacity: 0; }
-div#test input[type=radio] + label { border: 4px solid #F7CA18; border-radius: 10px; margin: 0.3em; display: inline-block; line-height: 1.5em; font-variant: small-caps; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; padding: 0.1em; padding-bottom: 0.25em; width: 210px; }
+div#test input[type=radio] + label { border: 4px solid #F7CA18; border-radius: 10px; margin: 0.1em; display: inline-block; line-height: 1.5em; font-variant: small-caps; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; padding: 0.1em; padding-bottom: 0.25em; width: 100%; }
 div#test input[type=radio] + label:hover { cursor: pointer; }
 div#test input[type=radio]:checked + label { background-color: #F7CA18; }
-div#test button { margin: 0; padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 1em; cursor: pointer; margin-top: 20px; }
+div#test button { margin: 0; padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 1em; cursor: pointer; margin-top: 40px; width: 100%; margin-left: 2px; }
 div#test button:focus, div#test button:active, div#test button:hover { outline: 0; }
 div#test button::-moz-focus-inner { padding: 0; border: 0; }
-div#test button span { display: block; width: 220px; padding: 0.2em; padding-bottom: 0.4em; background-color: #00a673; border-radius: 10px; text-decoration: none; font-variant: small-caps; letter-spacing: 0.05em; font-size: 22px; font-weight: 600; }
+div#test button span { display: block; padding: 0.3em; padding-bottom: 0.6em; background-color: #00a673; border-radius: 10px; text-decoration: none; font-variant: small-caps; letter-spacing: 0.05em; font-size: 26px; font-weight: 600; }
 div#test button span:focus, div#test button span:active, div#test button span:hover { outline: 0; cursor: pointer; }
 div#test ul { list-style: none; margin: 0; padding: 0; }
 @media all and (min-width: 415px) { div#test ul { width: 100%; } }
 @media all and (max-width: 414px) { div#test ul { width: 100%; } }
-@media all and (min-width: 768px) { div#test ul { width: 457px; margin: 0 auto; } }
-@media all and (min-width: 1024px) { div#test ul { width: 457px; margin: 0 auto; } }
+@media all and (min-width: 768px) { div#test ul { width: 400px; margin: 0 auto; } }
+@media all and (min-width: 1024px) { div#test ul { width: 400px; margin: 0 auto; } }
 div#test ul li { text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; background-color: #F7CA18; border: 4px solid #fff; padding: 0.3em; font-size: 14px; }
 
 /*==========================================

@@ -3,6 +3,10 @@
 /*==========================================
 					QUIZ
 ============================================*/
+#test-container {
+	max-width: 450px;
+	margin: 0 auto;
+}
 
 div#test {
 	padding: 10px 40px 80px 40px;
@@ -53,7 +57,7 @@ div#test {
 	input[type=radio] + label {
 		border: 4px solid $color-background-header;
 		border-radius: 10px;
-		margin: 0.3em;
+		margin: 0.1em;
 		display: inline-block;
 		line-height: 1.5em;
 		font-variant: small-caps;
@@ -62,7 +66,7 @@ div#test {
 		letter-spacing: 0.05em;
 		padding: 0.1em;
 		padding-bottom: 0.25em;
-		width: 210px;
+		width: 100%;
 
 		&:hover {
 			cursor: pointer;
@@ -81,13 +85,15 @@ div#test {
 		font-family : inherit;
 		font-size   : 1em;
 		cursor      : pointer;
-		margin-top: 20px;
+		margin-top: 40px;
 
   			&:focus,
 			&:active,
 			&:hover {
 				outline: 0;
 			}
+		width: 100%;
+	    margin-left: 2px;
 	}
 
 	button::-moz-focus-inner{
@@ -97,15 +103,14 @@ div#test {
 
 	button span{
 		display: block;
-		width: 220px;
-		padding: 0.2em;
-		padding-bottom: 0.4em;
+		padding: 0.3em;
+		padding-bottom: 0.6em;
 		background-color: $submit-color;
 		border-radius: 10px;
 		text-decoration: none;
 		font-variant: small-caps;
 		letter-spacing: 0.05em;
-		font-size: 22px;
+		font-size: 26px;
 		font-weight: 600;
 
 			&:focus,
@@ -130,12 +135,12 @@ div#test {
 		}
 
 		@include responsive(medium-screens) {
-			width: 457px;
+			width: 400px;
 			margin: 0 auto;
 		}
 
 		@include responsive(wide-screens) {
-			width: 457px;
+			width: 400px;
 			margin: 0 auto;
 		}
 
