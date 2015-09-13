@@ -32,7 +32,7 @@ function content () {
 
                     <div class="field">
                         <label for="name">Your name</label>
-                        <input id="name" class="fv-minlength-2" type="text" name="name" placeholder="Jane Doe" required>
+                        <input id="name" type="text" name="name" placeholder="Jane Doe">
                         <div id="name-error" class="danger"></div>
                     </div>
 
