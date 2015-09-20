@@ -1,0 +1,27 @@
+{
+  "name": "sis-stem-website",
+  "version": "1.0.0",
+  "description": "This is a website idea I am developing to help young women explore STEM careers. It's a work in progress and is currently at about version 0.7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lena-pl/sis-STEM-website.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lena-pl/sis-STEM-website/issues"
+  },
+  "homepage": "https://github.com/lena-pl/sis-STEM-website",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6"
+  }
+}
