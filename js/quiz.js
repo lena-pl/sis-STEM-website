@@ -126,11 +126,16 @@ function renderQuestion () {
         if( totalMath > totalEngineering && totalMath > totalScience && totalMath > totalTech) {
             outcome = mathResult;
         }
-        //  if( isHybrid == true ) {
-        //     outcome = hybridResult;
-        // }
-        if( (totalMath == totalEngineering && totalMath > totalScience && totalMath > totalTech) || (totalMath == totalScience && totalMath > totalTech && totalMath > totalEngineering) || (totalMath == totalTech && totalMath > totalScience && totalMath > totalEngineering) || (totalEngineering == totalTech && totalEngineering > totalScience && totalEngineering > totalMath) || (totalEngineering == totalScience && totalEngineering > totalMath && totalEngineering > totalTech) || (totalScience == totalTech && totalScience > totalMath && totalScience > totalEngineering) ) {
+         if( isHybrid() ) {
             outcome = hybridResult;
+        }
+
+        // Determine if the answer is a "hybrid" - multiple answers with equal points
+        function isHybrid() {
+
+            if( (totalMath == totalEngineering && totalMath > totalScience && totalMath > totalTech) || (totalMath == totalScience && totalMath > totalTech && totalMath > totalEngineering) || (totalMath == totalTech && totalMath > totalScience && totalMath > totalEngineering) || (totalEngineering == totalTech && totalEngineering > totalScience && totalEngineering > totalMath) || (totalEngineering == totalScience && totalEngineering > totalMath && totalEngineering > totalTech) || (totalScience == totalTech && totalScience > totalMath && totalScience > totalEngineering) ) {
+                    return true;
+            }
         }
 
  // alert(outcome);
@@ -186,20 +191,6 @@ function checkAnswer() {
             totalTech += parseInt(choices[i].getAttribute('data-techWeight'));
             totalEngineering += parseInt(choices[i].getAttribute('data-engineeringWeight'));
             totalMath += parseInt(choices[i].getAttribute('data-mathWeight'));
-
-           //Determine if the answer is a "hybrid" - multiple answers with equal points
-            // function isHybrid() {
-
-            //     userAnswers.push(totalMath);
-            //     userAnswers.push(totalEngineering);
-            //     userAnswers.push(totalScience);
-            //     userAnswers.push(totalTech);
-
-            //     userAnswers.sort();
-            //     console.log(userAnswers);
-
-            //     userAnswers[2] == userAnswers[3]
-            // };
 
            console.log('Your total science is: ' + totalScience + ' Your total tech is: ' + totalTech + ' Your total engineering is: ' + totalEngineering + ' Your total math is: ' + totalMath);
         }
